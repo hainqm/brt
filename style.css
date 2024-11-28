@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    rgb(173, 226, 223),
+    rgb(61, 164, 36)
+  );
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.cards{
+  width: 300px ;
+  height: 400px;
+  background-color: rgb(228, 228, 228);
+  margin-top: 100px;
+  box-shadow: 0 5px 50px rgb(58, 56, 56);
+  perspective: 1000px;
+  position: relative;
+
+}
+
+.card{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d; 
+  transform-origin: left center; 
+  transition: transform 2s ease-in-out;
+}
+
+
+.card_front, .card_back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: rgb(228, 228, 228);
+  box-shadow: 0 5px 50px rgb(58, 56, 56);
+
+}
+
+ .card_front{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+ .card_front h2{
+  padding-top: 30px;
+  color: rgb(173, 115, 7);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ .card_front img{
+  margin-top: 100px;
+  width: 100px;
+}
+
+
+ .card_back{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transform: rotateY(180deg);
+}
+
+ .card_back img{
+  margin-top: 60px;
+  width: 200px;
+  
+
+}
+
+ .card_main{ 
+  width: 100% ;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+
+  .card_main h3{
+  padding-top: 20px;
+ }
+ .card_main h4{
+  padding: 15px;
+  text-align: left;
+  line-height: 25px;
+  font-family:cursive;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+ .card_main .footer #from{
+  text-align: right;
+  
+}
+ .card_main .footer img{
+  width: 50px;
+ /* padding-right: 5px; */
+ display: block;
+ margin-left: 20px;
+ margin-bottom: 20px;
+  
+}
+
+
+.cards:hover .card{
+  transform: rotateY(-180deg);
+}
+
